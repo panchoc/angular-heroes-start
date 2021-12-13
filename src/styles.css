@@ -3,7 +3,8 @@
 
 body {
     background-color: #d6d6d6 !important;
-    background-image:url(https://raw.githubusercontent.com/kates29/angular-heroes-start/master/src/assets/bg.jpg);
+    /* background-image:url(https://raw.githubusercontent.com/kates29/angular-heroes-start/master/src/assets/bg.jpg); */
+    background-image: url("../src/assets/bg.jpg");
     background-size: cover;
     background-blend-mode: darken;
 }
