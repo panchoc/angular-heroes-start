@@ -1,14 +1,14 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
-import { Heroe } from '../classes/heroe';
-import { HeroesService } from '../heroes.service';
+import { Heroe } from '../../../classes/heroe';
+import { HeroesService } from '../../../heroes.service';
 import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-listado-de-heroes',
-  templateUrl: './listado-de-heroes.component.html',
-  styleUrls: ['./listado-de-heroes.component.css']
+  templateUrl: './listado-heroes.component.html',
+  styleUrls: ['./listado-heroes.component.css']
 })
-export class ListadoDeHeroesComponent implements OnInit {
+export class ListadoHeroesComponent implements OnInit {
 
   public title = 'Tutorial de Angular - Héroes de Marvel';
   public searchString;

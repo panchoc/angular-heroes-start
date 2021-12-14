@@ -1,17 +1,17 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 
-import { Heroe } from '../classes/heroe';
-import { HeroesService } from '../heroes.service';
+import { Heroe } from '../../../classes/heroe';
+import { HeroesService } from '../../../heroes.service';
 import { Location } from '@angular/common';
-import { ModalPollComponent } from '../modal-poll/modal-poll.component';
+import { ModalPollComponent } from '../../../modal-poll/modal-poll.component';
 
 @Component({
   selector: 'app-hero-profile',
-  templateUrl: './hero-profile.component.html',
-  styleUrls: ['./hero-profile.component.css']
+  templateUrl: './perfil-heroe.component.html',
+  styleUrls: ['./perfil-heroe.component.css']
 })
-export class HeroProfileComponent implements OnInit {
+export class PerfilHeroeComponent implements OnInit {
   @ViewChild('modal') modal;
   private id;
   public heroe: Heroe;
