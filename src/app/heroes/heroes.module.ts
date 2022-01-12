@@ -7,6 +7,9 @@ import { FormsModule } from '@angular/forms';
 import { SpinnerComponent } from '../spinner/spinner.component';
 import { CapitalizePipe } from '../capitalize.pipe';
 import { ModalPollComponent } from '../modal-poll/modal-poll.component';
+import { heroesReducer } from '../state/heroes.reducer';
+import { collectionReducer } from '../state/collection.reducer';
+import { StoreModule } from '@ngrx/store';
 
 
 
@@ -19,7 +22,8 @@ ModalPollComponent],
   imports: [
     CommonModule,
     HeroesRoutingModule,
-    FormsModule
+    FormsModule,StoreModule.forRoot({heroes:heroesReducer,collection:collectionReducer})
+    
   ]
 })
 export class HeroesModule { }

@@ -2,7 +2,10 @@ import { TestBed, inject } from '@angular/core/testing';
 
 import { HeroesService } from './heroes.service';
 
-describe('HeroesService', () => {
+fdescribe('HeroesService', () => {
+let httpClientSpy : {get : jasmine.Spy}
+let heroeService : HeroesService
+
   beforeEach(() => {
     TestBed.configureTestingModule({
       providers: [HeroesService]

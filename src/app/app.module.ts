@@ -1,5 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import { CUSTOM_ELEMENTS_SCHEMA, NgModule, NO_ERRORS_SCHEMA } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 
 import { HttpClientModule } from '@angular/common/http';
@@ -11,6 +11,8 @@ import { HeroesService } from './heroes.service';
 import { SpinnerComponent } from './spinner/spinner.component';
 import { ModalPollComponent } from './modal-poll/modal-poll.component';
 import { CapitalizePipe } from './capitalize.pipe';
+import { StoreModule } from '@ngrx/store';
+import { heroesReducer } from './state/heroes.reducer';
 
 @NgModule({
   declarations: [
@@ -24,8 +26,10 @@ import { CapitalizePipe } from './capitalize.pipe';
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    //StoreModule.forRoot({heroes : heroesReducer}, {})
   ],
+  schemas : [CUSTOM_ELEMENTS_SCHEMA, NO_ERRORS_SCHEMA],
   providers: [HeroesService],
   bootstrap: [AppComponent]
 })

@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
-
+import { HttpClientTestingModule, HttpTestingController } from '@angular/common/http/testing';
 import { Heroe } from './classes/heroe';
 
 @Injectable()
